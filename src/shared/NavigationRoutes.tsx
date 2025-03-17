@@ -1,4 +1,5 @@
 export const NavigationRoutes = {
+    welcom:'Welcom',
     home:'Home',
     categories:'Categories',
     cart:'Cart',
