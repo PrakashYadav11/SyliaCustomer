@@ -12,4 +12,6 @@ export const Strings = {
     enterpassword:'Enter Password',
     confirmpass:'Confirm Password',
     enterconfirm:'Retype your Password',
+    App_Logo:"App Logo",
+    Lets_Get_Started:"Let’s Get Started",
 }
