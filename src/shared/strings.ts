@@ -1,0 +1,15 @@
+export const Strings = {
+    password: 'Password',
+    email: 'Email',
+    enterEmail: 'Enter your email',
+    enterPassword: 'Enter your password',
+    firstname:'First Name',
+    enterfirst:'Enter your first name',
+    lastname:'Last Name',
+    enterlast:'Enter your last name',
+    mobile:'Mobile Number',
+    enternumber:'Enter your mobile number',
+    enterpassword:'Enter Password',
+    confirmpass:'Confirm Password',
+    enterconfirm:'Retype your Password',
+}

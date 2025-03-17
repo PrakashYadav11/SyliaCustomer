@@ -2,20 +2,19 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Image, Dimensions} from 'react-native';
 
-import { NavigationRoutes } from '../shared/NavigationRoutes';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {NavigationRoutes} from '../shared/NavigationRoutes';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from '../screens/Home';
 import Categories from '../screens/Categories';
 import Cart from '../screens/Cart';
 import MyProfile from '../screens/MyProfile';
-import { Images } from '../assets/Images';
+import {Images} from '../assets/Images';
 
 const Stack = createNativeStackNavigator();
 
 const Tab = createBottomTabNavigator();
 const {width} = Dimensions.get('window');
 const iconSize = width * 0.07;
-
 
 const BootamTabNavigation = () => {
   return (

@@ -4,4 +4,6 @@ export const NavigationRoutes = {
     cart:'Cart',
     my_profile:'My Profile',
     bottom: 'BootamTabNavigation',
+    login:'Login',
+    signup:'Signup',
 }
