@@ -9,12 +9,22 @@ import Categories from '../screens/Categories';
 import Cart from '../screens/Cart';
 import MyProfile from '../screens/MyProfile';
 import {Images} from '../assets/Images';
+import Search from '../screens/Search';
 
 const Stack = createNativeStackNavigator();
 
 const Tab = createBottomTabNavigator();
 const {width} = Dimensions.get('window');
 const iconSize = width * 0.07;
+
+export const Category = () => {
+  return(
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name={NavigationRoutes.categories} component={Categories}/>
+      <Stack.Screen name={NavigationRoutes.Search} component={Search}/>
+    </Stack.Navigator>
+  )
+}
 
 const BootamTabNavigation = () => {
   return (
@@ -54,6 +64,7 @@ const BootamTabNavigation = () => {
         name={NavigationRoutes.cart}
         component={Cart}
         options={{
+          tabBarStyle: { display: 'none' },
           tabBarIcon: ({color}) => (
             <Image
               source={Images.cart}
