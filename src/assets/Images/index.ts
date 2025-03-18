@@ -4,5 +4,12 @@ export const Images = {
     categories:require('./icons/categories.png'),
     myprofile:require('./icons/myprofile.png'),
     phone: require('./icons/phone.png'),
+    imgone:require('./icons/imgone.png'),
+    imgtow:require('./icons/imgtow.png'),
+    imgthree:require('./icons/imgthree.png'),
+    imgfour:require('./icons/imgfour.png'),
+    imgfive:require('./icons/imgfive.png'),
+    productOne:require('./icons/productOne.png'),
+    productTow:require('./icons/productTow.png'),
+    productThree:require('./icons/productThree.png'),
 };
-  
