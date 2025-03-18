@@ -6,6 +6,7 @@ import BootamTabNavigation from './BootamTabNavigation';
 import Login from '../screens/auth/Login';
 import Signup from '../screens/auth/Signup';
 import Welcom from '../screens/Welcom';
+import Notification from '../screens/Notification';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +17,7 @@ export default function MainNavigation() {
         <Stack.Screen name={NavigationRoutes.welcom} component={Welcom} />
         <Stack.Screen name={NavigationRoutes.login} component={Login} />
         <Stack.Screen name={NavigationRoutes.signup} component={Signup} />
+        <Stack.Screen name={NavigationRoutes.notification} component={Notification} />
         <Stack.Screen
           name={NavigationRoutes.bottom}
           component={BootamTabNavigation}

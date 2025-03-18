@@ -7,4 +7,5 @@ export const NavigationRoutes = {
     bottom: 'BootamTabNavigation',
     login:'Login',
     signup:'Signup',
+    notification:'Notification',
 }
