@@ -10,8 +10,6 @@ export const NavigationRoutes = {
   notification: 'Notification',
   Search: 'Search',
   Category: 'Category',
-
   ProductDetail: 'ProductDetail',
-
   settings: 'Settings',
 };

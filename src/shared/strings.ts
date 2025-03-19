@@ -33,4 +33,14 @@ export const Strings = {
   SearchResults: 'Search Results',
   TotalProductAvailable: 'Total 28 Products Available',
   Filters: 'Filters',
+  EYEBOGLER:'EYEBOGLER Men Regular Fit Hoodie',
+  Men_Regular_Fit_Hoodie: 'Men Regular Fit Hoodie',
+  Coupon:'Coupon :',
+  offer_price:'Offer Price ₹308',
+  offer_detail:'Get Flat Rs 300 Off on cart value of 990 & Above.',
+  Offers:'+17 Coupon offers',
+  BankOffer:'Bank Offer :',
+  BankOfferDetail:'Get Upto Rs. 500 Cashback of Rs. 1000',
+  Bank_Offer:'+6 Bank offers',
+  Color:'Color'
 };

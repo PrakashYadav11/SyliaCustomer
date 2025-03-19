@@ -11,6 +11,7 @@ import MyProfile from '../screens/MyProfile';
 import {Images} from '../assets/Images';
 import Search from '../screens/Search';
 import {useFocusEffect} from '@react-navigation/native';
+import ProductDetail from '../screens/ProductDetail/Index';
 
 const Stack = createNativeStackNavigator();
 
@@ -28,9 +29,16 @@ export const Category = ({navigation}) => {
     }, [navigation]),
   );
   return (
-    <Stack.Navigator screenOptions={{headerShown: false}}>
+    <Stack.Navigator
+      screenOptions={{headerShown: false}}
+      initialRouteName="Search">
       <Stack.Screen name={NavigationRoutes.categories} component={Categories} />
+
       <Stack.Screen name={NavigationRoutes.Search} component={Search} />
+      <Stack.Screen
+        name={NavigationRoutes.ProductDetail}
+        component={ProductDetail}
+      />
     </Stack.Navigator>
   );
 };
