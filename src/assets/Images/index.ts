@@ -12,4 +12,13 @@ export const Images = {
     productOne:require('./icons/productOne.png'),
     productTow:require('./icons/productTow.png'),
     productThree:require('./icons/productThree.png'),
+    cart_photo: require('../Images/cart_photo.png'),
+    dustbin: require('../Images/Dustbin.png'),
+    profile:require('../Images/Profile2.png'),
+    WishList: require('./icons/Like.png'),
+    History: require('./icons/history.png'),
+    order: require('./icons/order.png'),
+    setting: require('./icons/Setting.png'),
+    feedback: require('./icons/Feedback.png'),
+    LogOut: require('./icons/LogOut.png'),
 };
