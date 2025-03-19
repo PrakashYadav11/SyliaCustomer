@@ -11,6 +11,8 @@ import MyProfile from '../screens/MyProfile';
 import {Images} from '../assets/Images';
 import Search from '../screens/Search';
 import {useFocusEffect} from '@react-navigation/native';
+import Wishlist from '../screens/Wishlist';
+import MyOrders from '../screens/MyOrders';
 
 const Stack = createNativeStackNavigator();
 
@@ -35,10 +37,28 @@ export const Category = ({navigation}) => {
   );
 };
 
+export const profile = ({navigation})=>{
+  useFocusEffect(
+    useCallback(() => {
+      navigation.reset({
+        index: 0,
+        routes: [{name: NavigationRoutes.my_profile}],
+      });
+    }, [navigation]),
+  );
+  return(
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+    <Stack.Screen name={NavigationRoutes.my_profile} component={MyProfile} />
+    <Stack.Screen name={NavigationRoutes.wishlist} component={Wishlist} />
+    <Stack.Screen name={NavigationRoutes.myorders} component={MyOrders}/>
+  </Stack.Navigator>
+  )
+}
+
 const BootamTabNavigation = () => {
   return (
     <Tab.Navigator
-      screenOptions={{headerShown: false, tabBarHideOnKeyboard: true}}>
+      screenOptions={{headerShown: false, tabBarHideOnKeyboard: true,}}>
       <Tab.Screen
         name={NavigationRoutes.home}
         component={Home}
@@ -95,8 +115,8 @@ const BootamTabNavigation = () => {
         }}
       />
       <Tab.Screen
-        name={NavigationRoutes.my_profile}
-        component={MyProfile}
+        name={NavigationRoutes.profile}
+        component={profile}
         options={{
           // tabBarStyle:{display:"none"},
           tabBarIcon: ({color}) => (
@@ -109,6 +129,14 @@ const BootamTabNavigation = () => {
             />
           ),
         }}
+        listeners={({navigation}) => ({
+          tabPress: e => {
+            e.preventDefault(); // Prevent default behavior
+            navigation.navigate(NavigationRoutes.profile, {
+              screen: NavigationRoutes.my_profile, // Ensure it goes to Categories
+            });
+          },
+        })}
       />
       {/* <Tab.Screen
         name={NavigationRoutes.Search}

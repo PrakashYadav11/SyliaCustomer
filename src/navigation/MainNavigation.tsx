@@ -11,6 +11,9 @@ import ProductDetail from '../screens/ProductDetail/Index';
 
 import Notification from '../screens/Notification';
 import Settings from '../screens/Settings';
+import Wishlist from '../screens/Wishlist';
+import MyOrders from '../screens/MyOrders';
+import TrackAndViewOrder from '../screens/TrackAndViewOrder';
 
 
 
@@ -28,7 +31,9 @@ export default function MainNavigation() {
 
         <Stack.Screen name={NavigationRoutes.notification} component={Notification} />
         <Stack.Screen name={NavigationRoutes.settings} component={Settings}/>
-
+        <Stack.Screen name={NavigationRoutes.wishlist} component={Wishlist}/>
+        <Stack.Screen name={NavigationRoutes.myorders} component={MyOrders}/>
+        <Stack.Screen name={NavigationRoutes.trackandvieworder} component={TrackAndViewOrder}/>
         <Stack.Screen
           name={NavigationRoutes.bottom}
           component={BootamTabNavigation}

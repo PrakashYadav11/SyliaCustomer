@@ -3,15 +3,17 @@ export const NavigationRoutes = {
   home: 'Home',
   categories: 'Categories',
   cart: 'Cart',
-  my_profile: 'My Profile',
+  my_profile: 'My Profil',
   bottom: 'BootamTabNavigation',
   login: 'Login',
   signup: 'Signup',
   notification: 'Notification',
   Search: 'Search',
   Category: 'Category',
-
+  wishlist:'Wishlist',
   ProductDetail: 'ProductDetail',
-
+  profile:'MyProfile',
   settings: 'Settings',
+  myorders:'MyOrders',
+  trackandvieworder:'TrackAndViewOrder',
 };

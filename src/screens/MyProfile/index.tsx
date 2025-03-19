@@ -39,11 +39,11 @@ const MyProfile = ({navigation}) => {
       </View>
 
       <View style={{marginTop:20}}>
-      <ProfileOption icon={Images.WishList} tect={Strings.Wishlist} onPress={undefined} />
-      <ProfileOption icon={Images.History} tect={Strings.Invoice_History} onPress={undefined} />
-      <ProfileOption icon={Images.order} tect={Strings.My_Orders} onPress={undefined} />
-      <ProfileOption icon={Images.setting} tect={Strings.Settings} onPress={()=>navigation.navigate(NavigationRoutes.settings)} />
-      <ProfileOption icon={Images.feedback} tect={Strings.Feedback} onPress={undefined} />
+      <ProfileOption icon={Images.WishList} tect={Strings.Wishlist} onPress={()=>navigation.navigate(NavigationRoutes.wishlist)}/>
+      <ProfileOption icon={Images.History} tect={Strings.Invoice_History} onPress={undefined}/>
+      <ProfileOption icon={Images.order} tect={Strings.My_Orders} onPress={()=>navigation.navigate(NavigationRoutes.myorders)}/>
+      <ProfileOption icon={Images.setting} tect={Strings.Settings} onPress={()=>navigation.navigate(NavigationRoutes.settings)}/>
+      <ProfileOption icon={Images.feedback} tect={Strings.Feedback} onPress={undefined}/>
       <ProfileOption
         icon={Images.LogOut}
         tect={Strings.Log_Out}
