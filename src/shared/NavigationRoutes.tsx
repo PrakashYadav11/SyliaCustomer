@@ -7,7 +7,11 @@ export const NavigationRoutes = {
   bottom: 'BootamTabNavigation',
   login: 'Login',
   signup: 'Signup',
+  notification: 'Notification',
   Search: 'Search',
   Category: 'Category',
-  ProductDetail: 'ProductDetail'
+
+  ProductDetail: 'ProductDetail',
+
+  settings: 'Settings',
 };

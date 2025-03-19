@@ -5,11 +5,12 @@ import images from '../../dummyData/carouselData';
 import CustomMostPopularProducts from '../../components/CustomMostPopularProducts';
 import CustomFeatured from '../../components/CustomFeatured';
 import CustomNewArrivals from '../../components/CustomNewArrivals';
+import { NavigationRoutes } from '../../shared/NavigationRoutes';
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <CustomSearchBar/>
+      <CustomSearchBar onnotPress={()=>navigation.navigate(NavigationRoutes.notification)}/>
       <ScrollView>
       <CustomMostPopularProducts/>
       <CustomFeatured/>
