@@ -30,4 +30,7 @@ export const Strings = {
   Settings: 'Settings',
   Feedback: 'Feedback',
   Log_Out: 'Log Out',
+  SearchResults: 'Search Results',
+  TotalProductAvailable: 'Total 28 Products Available',
+  Filters: 'Filters',
 };

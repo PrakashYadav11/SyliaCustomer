@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Image, Dimensions} from 'react-native';
 
@@ -10,6 +10,7 @@ import Cart from '../screens/Cart';
 import MyProfile from '../screens/MyProfile';
 import {Images} from '../assets/Images';
 import Search from '../screens/Search';
+import {useFocusEffect} from '@react-navigation/native';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,14 +18,22 @@ const Tab = createBottomTabNavigator();
 const {width} = Dimensions.get('window');
 const iconSize = width * 0.07;
 
-export const Category = () => {
-  return(
+export const Category = ({navigation}) => {
+  useFocusEffect(
+    useCallback(() => {
+      navigation.reset({
+        index: 0,
+        routes: [{name: NavigationRoutes.categories}],
+      });
+    }, [navigation]),
+  );
+  return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
-      <Stack.Screen name={NavigationRoutes.categories} component={Categories}/>
-      <Stack.Screen name={NavigationRoutes.Search} component={Search}/>
+      <Stack.Screen name={NavigationRoutes.categories} component={Categories} />
+      <Stack.Screen name={NavigationRoutes.Search} component={Search} />
     </Stack.Navigator>
-  )
-}
+  );
+};
 
 const BootamTabNavigation = () => {
   return (
@@ -46,8 +55,8 @@ const BootamTabNavigation = () => {
         }}
       />
       <Tab.Screen
-        name={NavigationRoutes.categories}
-        component={Categories}
+        name={NavigationRoutes.Category}
+        component={Category}
         options={{
           tabBarIcon: ({color}) => (
             <Image
@@ -59,12 +68,21 @@ const BootamTabNavigation = () => {
             />
           ),
         }}
+        listeners={({navigation}) => ({
+          tabPress: e => {
+            e.preventDefault(); // Prevent default behavior
+            navigation.navigate(NavigationRoutes.Category, {
+              screen: NavigationRoutes.categories, // Ensure it goes to Categories
+            });
+          },
+        })}
       />
+
       <Tab.Screen
         name={NavigationRoutes.cart}
         component={Cart}
         options={{
-          tabBarStyle: { display: 'none' },
+          tabBarStyle: {display: 'none'},
           tabBarIcon: ({color}) => (
             <Image
               source={Images.cart}

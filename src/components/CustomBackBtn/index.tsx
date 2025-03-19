@@ -7,7 +7,7 @@ interface inputTypes {
     onPress:any
   }
 
-const CustomBtn = ({onPress}:inputTypes) => {
+const CustomBackBtn = ({onPress}:inputTypes) => {
   return (
     <View>
       <TouchableOpacity
@@ -18,4 +18,4 @@ const CustomBtn = ({onPress}:inputTypes) => {
   );
 };
 
-export default CustomBtn;
+export default CustomBackBtn;

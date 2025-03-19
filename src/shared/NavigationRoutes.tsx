@@ -9,4 +9,5 @@ export const NavigationRoutes = {
   signup: 'Signup',
   Search: 'Search',
   Category: 'Category',
+  ProductDetail: 'ProductDetail'
 };

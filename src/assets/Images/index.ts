@@ -21,4 +21,5 @@ export const Images = {
     setting: require('./icons/Setting.png'),
     feedback: require('./icons/Feedback.png'),
     LogOut: require('./icons/LogOut.png'),
+    filter: require('./icons/filter.png'),
 };

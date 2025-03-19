@@ -4,7 +4,12 @@ import {cartData} from '../../dummyData/cartData';
 import {style} from './Style';
 import {Images} from '../../assets/Images';
 
-const CustomCartItem = () => {
+interface inputTypes {
+  showBtn: boolean;
+  onPress:any
+}
+
+const CustomCartItem = ({showBtn = true,onPress}: inputTypes) => {
   const [buttonTexts, setButtonTexts] = useState(
     cartData.reduce((acc, item) => {
       acc[item.id] = item.txt1; // Initialize with txt1
@@ -26,16 +31,18 @@ const CustomCartItem = () => {
         keyExtractor={item => item.id.toString()}
         numColumns={2}
         renderItem={({item}) => (
-          <View style={style.container}>
+          <TouchableOpacity style={style.container} onPress={onPress}>
             <Image source={item.image} style={style.imgStyle} />
-            <TouchableOpacity
-              style={style.btnStyle}
-              onPress={() => handleToggleText(item.id, item.txt1, item.txt2)}>
-              <Text style={style.txtStyle}>
-                {buttonTexts[item.id]} {/* Dynamically changing text */}
-              </Text>
-              <Image source={Images.dustbin} style={style.iconStyle} />
-            </TouchableOpacity>
+            {showBtn && (
+              <TouchableOpacity
+                style={style.btnStyle}
+                onPress={() => handleToggleText(item.id, item.txt1, item.txt2)}>
+                <Text style={style.txtStyle}>
+                  {buttonTexts[item.id]} {/* Dynamically changing text */}
+                </Text>
+                <Image source={Images.dustbin} style={style.iconStyle} />
+              </TouchableOpacity>
+            )}
             <Text style={style.nameStyle}>{item.name}</Text>
             <Text style={style.descriptionStyle}>{item.description}</Text>
             <View style={style.priceStl}>
@@ -43,7 +50,7 @@ const CustomCartItem = () => {
               <Text style={style.amountStyle}>{item.amount}</Text>
             </View>
             <Text style={style.typeStyle}>{item.delivery_type}</Text>
-          </View>
+          </TouchableOpacity>
         )}
       />
     </View>
