@@ -6,12 +6,14 @@ import CustomMostPopularProducts from '../../components/CustomMostPopularProduct
 import CustomFeatured from '../../components/CustomFeatured';
 import CustomNewArrivals from '../../components/CustomNewArrivals';
 import { NavigationRoutes } from '../../shared/NavigationRoutes';
+import CustomAdCarousa from '../../components/CustomAdCarousa';
 
 const Home = ({navigation}) => {
   return (
     <View style={styles.container}>
       <CustomSearchBar onnotPress={()=>navigation.navigate(NavigationRoutes.notification)}/>
       <ScrollView>
+      <CustomAdCarousa/>
       <CustomMostPopularProducts/>
       <CustomFeatured/>
       <CustomNewArrivals/>

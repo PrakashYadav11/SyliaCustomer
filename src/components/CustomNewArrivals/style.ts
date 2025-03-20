@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     padding: width * 0.04, 
     flex: 1,
     backgroundColor: "white",
+    bottom:25,
   },
   header: {
     flexDirection: "row",
