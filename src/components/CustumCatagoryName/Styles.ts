@@ -16,5 +16,6 @@ export const styles=StyleSheet.create({
         fontSize:16,
         color:'black',
         fontWeight:'600',
+        textAlign:'center'
     },
 })

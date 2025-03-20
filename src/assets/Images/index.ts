@@ -22,4 +22,13 @@ export const Images = {
     feedback: require('./icons/Feedback.png'),
     LogOut: require('./icons/LogOut.png'),
     filter: require('./icons/filter.png'),
+    product:require('./icons/product.png'),
+    google:require('./icons/google.png'),
+    paypal:require('./icons/paypal.png'),
+    apple:require('./icons/apple.png'),
+    bank:require('./icons/bank.png'),
+    smile:require('../Images/Smile_Icon.png'),
+    verified: require('../Images/Verified_Icon.png'),
+    hq: require('../Images/HQ_Icon.png'),
+    coupon: require('./icons/Coupon.png')
 };

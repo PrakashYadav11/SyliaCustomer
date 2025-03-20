@@ -11,8 +11,16 @@ import ProductDetail from '../screens/ProductDetail/Index';
 
 import Notification from '../screens/Notification';
 import Settings from '../screens/Settings';
+
 import Categories from '../screens/Categories';
 import Search from '../screens/Search';
+
+import Wishlist from '../screens/Wishlist';
+import MyOrders from '../screens/MyOrders';
+import TrackAndViewOrder from '../screens/TrackAndViewOrder';
+
+
+
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +39,14 @@ export default function MainNavigation() {
           component={Notification}
         />
         <Stack.Screen name={NavigationRoutes.settings} component={Settings} />
+
+
+        <Stack.Screen name={NavigationRoutes.ProductDetail} component={ProductDetail}/>
+
+
+        <Stack.Screen name={NavigationRoutes.wishlist} component={Wishlist}/>
+        <Stack.Screen name={NavigationRoutes.myorders} component={MyOrders}/>
+        <Stack.Screen name={NavigationRoutes.trackandvieworder} component={TrackAndViewOrder}/>
 
         <Stack.Screen
           name={NavigationRoutes.bottom}

@@ -16,6 +16,7 @@ const Categories = ({navigation}) => {
         />
         <Text style={style.headerTxt}>{Strings.All_Categories}</Text>
       </View>
+
       <CustomCategoryName
         onPress={() => navigation.navigate(NavigationRoutes.Search)}
       />
