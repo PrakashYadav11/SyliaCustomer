@@ -18,6 +18,8 @@ import Wishlist from '../screens/Wishlist';
 import MyOrders from '../screens/MyOrders';
 import DeliveryStep1 from '../screens/Delivery/Delivery1/Index';
 import DeliveryStep2 from '../screens/Delivery/Delivery2/Index';
+import PaymentMethod from '../screens/PaymentMethod';
+import PaymentSuccess from '../screens/PaymentSuccess';
 
 const Stack = createNativeStackNavigator();
 
@@ -47,6 +49,36 @@ export const Category = ({navigation}) => {
       />
       <Stack.Screen name={NavigationRoutes.DeliveryStep1} component={DeliveryStep1}/>
       <Stack.Screen name={NavigationRoutes.DeliveryStep2} component={DeliveryStep2}/>
+      <Stack.Screen name={NavigationRoutes.PaymentMethod} component={PaymentMethod}/>
+      <Stack.Screen name={NavigationRoutes.PaymentSuccess} component={PaymentSuccess}/>
+    </Stack.Navigator>
+  );
+};
+
+export const HomeStake = ({navigation}) => {
+  useFocusEffect(
+    useCallback(() => {
+      navigation.reset({
+        index: 0,
+        routes: [{name: NavigationRoutes.home}],
+      });
+    }, [navigation]),
+  );
+  return (
+    <Stack.Navigator
+      screenOptions={{headerShown: false}}
+      initialRouteName={NavigationRoutes.home}>
+      <Stack.Screen name={NavigationRoutes.home} component={Home} />
+      <Stack.Screen name={NavigationRoutes.Search} component={Search} />
+
+      <Stack.Screen
+        name={NavigationRoutes.ProductDetail}
+        component={ProductDetail}
+      />
+      <Stack.Screen name={NavigationRoutes.DeliveryStep1} component={DeliveryStep1}/>
+      <Stack.Screen name={NavigationRoutes.DeliveryStep2} component={DeliveryStep2}/>
+      <Stack.Screen name={NavigationRoutes.PaymentMethod} component={PaymentMethod}/>
+      <Stack.Screen name={NavigationRoutes.PaymentSuccess} component={PaymentSuccess}/>
     </Stack.Navigator>
   );
 };
@@ -74,8 +106,8 @@ const BootamTabNavigation = () => {
     <Tab.Navigator
       screenOptions={{headerShown: false, tabBarHideOnKeyboard: true}}>
       <Tab.Screen
-        name={NavigationRoutes.home}
-        component={Home}
+        name={NavigationRoutes.HomeStake}
+        component={HomeStake}
         options={{
           tabBarIcon: ({color}) => (
             <Image
@@ -87,6 +119,14 @@ const BootamTabNavigation = () => {
             />
           ),
         }}
+        listeners={({navigation}) => ({
+          tabPress: e => {
+            e.preventDefault(); // Prevent default behavior
+            navigation.navigate(NavigationRoutes.HomeStake, {
+              screen: NavigationRoutes.home, // Ensure it goes to Categories
+            });
+          },
+        })}
       />
       <Tab.Screen
         name={NavigationRoutes.Category}

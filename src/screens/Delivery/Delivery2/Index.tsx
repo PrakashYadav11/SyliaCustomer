@@ -4,12 +4,13 @@ import {style} from './Style';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {Strings} from '../../../shared/strings';
 import {Images} from '../../../assets/Images';
+import { NavigationRoutes } from '../../../shared/NavigationRoutes';
 
-const DeliveryStep2 = () => {
+const DeliveryStep2 = ({navigation}) => {
   return (
     <View style={style.mainContainer}>
       <View style={style.container}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=> navigation.navigate(NavigationRoutes.DeliveryStep1)}>
           <Ionicons name="arrow-back" size={20} color="black" />
         </TouchableOpacity>
         <View style={style.textContainer}>
@@ -81,7 +82,7 @@ const DeliveryStep2 = () => {
         </View>
         <TouchableOpacity
           style={style.btn}
-          onPress={() => navigation.navigate(NavigationRoutes.DeliveryStep2)}>
+          onPress={() => navigation.navigate(NavigationRoutes.PaymentMethod)}>
           <Text style={style.btnText}>{Strings.payment}</Text>
         </TouchableOpacity>
       </View>

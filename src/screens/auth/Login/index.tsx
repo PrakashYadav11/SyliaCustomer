@@ -17,8 +17,7 @@ import CustomCheckbox from '../../../components/CustomCheckbox';
 
 const {width, height} = Dimensions.get('window');
 
-const Login = () => {
-  const navigation = useNavigation();
+const Login = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.headerText}>Welcome Back!</Text>
@@ -69,6 +68,7 @@ const Login = () => {
       <View style={styles.btmBtn}>
         <TouchableOpacity
           style={styles.btnStyle}
+          onPress={()=>navigation.navigate(NavigationRoutes.OtpOne)}
         >
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <Image source={Images.phone} style={styles.img} />

@@ -10,8 +10,9 @@ import {
 import Feather from 'react-native-vector-icons/Feather'; 
 import {Images} from '../../assets/Images';
 import styles from './style';
+import { NavigationRoutes } from '../../shared/NavigationRoutes';
 
-const PaymentMethod = () => {
+const PaymentMethod = ({navigation}) => {
   return (
     
       <View style={styles.container}>
@@ -69,7 +70,7 @@ const PaymentMethod = () => {
         </View>
 
         {/* Next Button */}
-        <TouchableOpacity style={styles.nextButton}>
+        <TouchableOpacity style={styles.nextButton} onPress={()=> navigation.navigate(NavigationRoutes.PaymentSuccess)}> 
           <Text style={styles.nextText}>Next</Text>
         </TouchableOpacity>
         </ScrollView>

@@ -10,7 +10,11 @@ import {
 import mostPopular from '../../dummyData/mostPopularData';
 import styles from './style';
 
-const CustomMostPopularProducts = () => {
+interface inputTypes {
+  onPress : any
+}
+
+const CustomMostPopularProducts = ({onPress}: inputTypes) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -26,7 +30,7 @@ const CustomMostPopularProducts = () => {
         keyExtractor={item => item.id.toString()}
         showsHorizontalScrollIndicator={false}
         renderItem={({item}) => (
-          <TouchableOpacity>
+          <TouchableOpacity onPress={onPress}>
             <View style={styles.card}>
               <Image source={item.image} style={styles.image} />
               <Text style={styles.name}>{item.name}</Text>

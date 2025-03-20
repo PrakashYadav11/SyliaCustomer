@@ -154,7 +154,7 @@ export const style = StyleSheet.create({
     marginTop: heightPixel(5),
   },
   btncontainer: {
-    top: heightPixel(190),
+    top: heightPixel(200),
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',

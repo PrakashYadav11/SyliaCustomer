@@ -5,6 +5,7 @@ export const style = StyleSheet.create({
   mainContainer: {
     flex: 1,
     backgroundColor: '#D9D9D980',
+    
   },
   container: {
     flexDirection: 'row',

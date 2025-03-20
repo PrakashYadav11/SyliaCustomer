@@ -1,5 +1,5 @@
 import {Image, ScrollView, Text, TouchableOpacity, View} from 'react-native';
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {style} from './Style';
 import CustomBackBtn from '../../components/CustomBackBtn';
 import {NavigationRoutes} from '../../shared/NavigationRoutes';
@@ -12,8 +12,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import {heightPixel} from '../../Utils/ResponsiveDimensions';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
-
 const ProductDetail = ({rating = 3, totalStars = 5}) => {
+  const [isFavorite, setIsFavorite] = useState(false);
   const navigation = useNavigation();
 
   return (
@@ -182,13 +182,21 @@ const ProductDetail = ({rating = 3, totalStars = 5}) => {
           <TouchableOpacity style={style.iconButton}>
             <Entypo name="share-alternative" size={20} color="black" />
           </TouchableOpacity>
-          <TouchableOpacity style={style.iconButton}>
-            <FontAwesome name="heart-o" size={20} color="black" />
+          <TouchableOpacity
+            style={style.iconButton}
+            onPress={() => setIsFavorite(!isFavorite)}>
+            <FontAwesome
+              name={isFavorite ? 'heart' : 'heart-o'}
+              size={20}
+              color={isFavorite ? 'red' : 'black'}
+            />
           </TouchableOpacity>
         </View>
 
         {/* Add to Cart Button */}
-        <TouchableOpacity style={style.addToCartButton} onPress={()=>navigation.navigate(NavigationRoutes.DeliveryStep1)}>
+        <TouchableOpacity
+          style={style.addToCartButton}
+          onPress={() => navigation.navigate(NavigationRoutes.DeliveryStep1)}>
           <Text style={style.addToCartText}>Add to Cart</Text>
         </TouchableOpacity>
       </View>

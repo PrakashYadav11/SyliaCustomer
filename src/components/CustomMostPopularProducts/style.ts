@@ -7,12 +7,13 @@ const styles = StyleSheet.create({
     padding: width * 0.04, 
     flex: 1,
     backgroundColor: "white",
+    bottom:10,
   },
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: width * 0.02, 
+    marginBottom: width * 0.01, 
   },
   title: {
     fontSize: width * 0.05, 

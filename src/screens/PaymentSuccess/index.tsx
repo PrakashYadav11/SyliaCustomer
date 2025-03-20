@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './style';
+import { NavigationRoutes } from '../../shared/NavigationRoutes';
 
 const { width, height } = Dimensions.get('window');
 
@@ -24,7 +25,7 @@ const PaymentSuccess = ({ navigation }) => {
         </TouchableOpacity>
 
         {/* Back to Home Button */}
-        <TouchableOpacity style={styles.backButton} onPress={() => navigation.navigate('Home')}>
+        <TouchableOpacity style={styles.backButton} onPress={() => navigation.navigate(NavigationRoutes.bottom)}>
           <Text style={styles.buttonText}>Back To Home</Text>
         </TouchableOpacity>
       </View>

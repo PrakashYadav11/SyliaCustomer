@@ -39,7 +39,7 @@ const Cart = ({navigation}) => {
         </View>
         <View style={style.bottomStyle}>
           <Text style={style.lastPrice}>₹205.00</Text>
-          <TouchableOpacity style={style.placeOrder}>
+          <TouchableOpacity style={style.placeOrder} onPress={()=>navigation.navigate(NavigationRoutes.DeliveryStep1)}>
             <Text style={style.placeOrderStl}>{Strings.Place_Order}</Text>
           </TouchableOpacity>
         </View>

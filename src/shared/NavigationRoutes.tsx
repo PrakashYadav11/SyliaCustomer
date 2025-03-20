@@ -1,6 +1,6 @@
 export const NavigationRoutes = {
   welcom: 'Welcom',
-  home: 'Home',
+  home: 'Homes',
   categories: 'Categories',
   cart: 'Cart',
   my_profile: 'My Profil',
@@ -18,4 +18,9 @@ export const NavigationRoutes = {
   trackandvieworder: 'TrackAndViewOrder',
   DeliveryStep1: 'DeliveryStep1',
   DeliveryStep2: 'DeliveryStep2',
+  PaymentMethod: 'PaymentMethod',
+  PaymentSuccess: 'PaymentSuccess',
+  OtpOne: 'OtpOne',
+  OtpTow: 'OtpTow',
+  HomeStake: 'Home'
 };
