@@ -20,12 +20,12 @@ export const style = StyleSheet.create({
     width: widthPixel(395),
     height: heightPixel(3),
     backgroundColor: '#D9D9D9',
-    top: heightPixel(150),
+    top: heightPixel(120),
   },
   priceDetailStyle: {
     height: heightPixel(252),
     width: widthPixel(395),
-    top: heightPixel(170),
+    top: heightPixel(140),
   },
   priceDetailTxt: {
     fontSize: 20,

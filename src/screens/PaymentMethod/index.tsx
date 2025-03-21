@@ -18,7 +18,7 @@ const PaymentMethod = ({navigation}) => {
       <View style={styles.container}>
         {/* Header with Back Button and Title */}
         <View style={styles.header}>
-          <TouchableOpacity style={styles.backButton}>
+          <TouchableOpacity style={styles.backButton} onPress={()=>navigation.navigate(NavigationRoutes.DeliveryStep2)}>
             <View>
               <Feather name="arrow-left" size={24} color="white" />
             </View>

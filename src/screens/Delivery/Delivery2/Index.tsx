@@ -44,7 +44,7 @@ const DeliveryStep2 = ({navigation}) => {
         <View style={style.divider} />
 
         {/* Delivery Info */}
-        <View style={style.deliveryContainer}>
+        <View style={style.deliveryContaine}>
           <Text style={style.codText}>{Strings.deliveryType}</Text>
           <Text style={style.estDelivery}>
             Est delivery <Text style={style.boldText}>08 Jan</Text>

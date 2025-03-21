@@ -1,11 +1,13 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
+
+const {width, height} = Dimensions.get('window');
 import {heightPixel, widthPixel} from '../../Utils/ResponsiveDimensions';
 
 export const style = StyleSheet.create({
   containe: {
     flex: 1,
     backgroundColor: 'white',
-    padding: heightPixel(10),
+    padding: height * 0.012,
   },
   header: {
     flexDirection: 'row',
@@ -14,44 +16,44 @@ export const style = StyleSheet.create({
   rightHeader: {
     alignSelf: 'center',
     flexDirection: 'row',
-    marginRight: widthPixel(10),
+    marginRight: width * 0.025,
   },
   iconStyle: {
-    marginRight: widthPixel(10),
+    marginRight: width * 0.025,
   },
   imgStyle: {
-    height: heightPixel(471),
-    width: widthPixel(371),
-    marginLeft: widthPixel(15),
+    height: height * 0.55,
+    width: width * 0.9,
+    marginLeft: width * 0.04,
     borderRadius: 10,
-    marginTop: heightPixel(10),
+    marginTop: height * 0.012,
   },
   productDetail: {
     width: '100%',
-    height: heightPixel(120),
+    height: height * 0.15,
     backgroundColor: 'white',
-    marginTop: heightPixel(15),
+    marginTop: height * 0.02,
     justifyContent: 'space-between',
     flexDirection: 'row',
   },
   productDetailBox: {
-    height: heightPixel(99),
-    width: widthPixel(167),
+    height: height * 0.12,
+    width: width * 0.45,
   },
   productName: {
     fontSize: 15,
     fontWeight: '700',
-    marginLeft: widthPixel(15),
+    marginLeft: width * 0.04,
   },
   star: {
     flexDirection: 'row',
-    marginLeft: widthPixel(15),
-    marginTop: heightPixel(5),
+    marginLeft: width * 0.04,
+    marginTop: height * 0.006,
   },
   price: {
     flexDirection: 'row',
-    marginLeft: widthPixel(15),
-    marginTop: heightPixel(5),
+    marginLeft: width * 0.04,
+    marginTop: height * 0.006,
   },
   txt: {
     color: 'black',
@@ -61,41 +63,41 @@ export const style = StyleSheet.create({
   txt2: {
     fontSize: 12,
     fontWeight: '400',
-    left: widthPixel(8),
+    left: width * 0.02,
     textDecorationLine: 'line-through',
   },
   offer: {
     fontSize: 12,
     fontWeight: '400',
-    left: widthPixel(10),
+    left: width * 0.025,
     color: 'black',
   },
   tax: {
-    marginLeft: widthPixel(15),
-    marginTop: heightPixel(5),
+    marginLeft: width * 0.04,
+    marginTop: height * 0.006,
     fontSize: 10,
   },
   txt3: {
     fontSize: 12,
     fontWeight: '400',
     textDecorationLine: 'underline',
-    marginRight: widthPixel(10),
+    marginRight: width * 0.025,
   },
   offers: {
     width: '100%',
-    height: heightPixel(200),
+    height: height * 0.25,
     backgroundColor: 'white',
     justifyContent: 'space-between',
     flexDirection: 'row',
   },
   coupon: {
-    height: heightPixel(136),
-    width: widthPixel(158),
+    height: height * 0.17, // 136px converted to percentage of screen height
+    width: width * 0.42, // 158px converted to percentage of screen width
     borderWidth: 1,
     alignSelf: 'center',
-    marginLeft: widthPixel(15),
+    marginLeft: width * 0.04,
     borderRadius: 10,
-    padding: widthPixel(10),
+    padding: width * 0.025,
   },
   cpnTxt: {
     color: 'black',
@@ -105,106 +107,106 @@ export const style = StyleSheet.create({
     color: 'black',
     textDecorationLine: 'underline',
     fontWeight: '600',
-    top: heightPixel(10),
+    top: height * 0.012, // 10px converted to relative height
   },
   offerNo: {
     color: 'black',
-    top: heightPixel(10),
-    left: heightPixel(15),
+    top: height * 0.012,
+    left: width * 0.04,
   },
   BankOffer: {
-    height: heightPixel(136),
-    width: widthPixel(158),
+    height: height * 0.17,
+    width: width * 0.42,
     borderWidth: 1,
     alignSelf: 'center',
-    marginRight: widthPixel(10),
+    marginRight: width * 0.025,
     borderRadius: 10,
-    padding: widthPixel(10),
+    padding: width * 0.025,
   },
   bankOffer: {
     color: 'black',
-    top: heightPixel(22),
+    top: height * 0.05,
   },
   line: {
-    height: heightPixel(8),
-    width: widthPixel(440),
+    height: height * 0.01, // 8px converted to relative height
+    width: width * 0.95, // 440px converted to relative width
     backgroundColor: '#D9D9D980',
   },
   colorSection: {
-    marginLeft: widthPixel(15),
-    marginTop: heightPixel(15),
+    marginLeft: width * 0.04,
+    marginTop: height * 0.02,
   },
   color: {
-    fontSize: 20,
+    fontSize: width * 0.05, // Responsive font size
     fontWeight: '600',
     fontFamily: 'Inter',
     color: 'black',
   },
   colors: {
     width: '100%',
-    height: heightPixel(80),
+    height: height * 0.1, // 80px converted to relative height
     alignItems: 'center',
-    flexDirection:'row'
+    flexDirection: 'row',
   },
   circle: {
-    height: heightPixel(60),
-    width: widthPixel(60),
-    borderRadius: 50,
+    height: width * 0.15, // Keeping it proportional as it's a circle
+    width: width * 0.15,
+    borderRadius: width * 0.075, // 50% of width to maintain circular shape
     borderWidth: 1,
     borderColor: '#D9D9D9',
-    marginHorizontal:widthPixel(5),
-    backgroundColor:'black'
+    marginHorizontal: width * 0.012,
+    backgroundColor: 'black',
   },
   circle2: {
-    height: heightPixel(60),
-    width: widthPixel(60),
-    borderRadius: 50,
+    height: width * 0.15,
+    width: width * 0.15,
+    borderRadius: width * 0.075,
     borderWidth: 1,
     borderColor: '#D9D9D9',
-    marginHorizontal:widthPixel(5),
-    backgroundColor:'blue'
+    marginHorizontal: width * 0.012,
+    backgroundColor: 'blue',
   },
   circle3: {
-    height: heightPixel(60),
-    width: widthPixel(60),
-    borderRadius: 50,
+    height: width * 0.15,
+    width: width * 0.15,
+    borderRadius: width * 0.075,
     borderWidth: 1,
     borderColor: '#D9D9D9',
-    marginHorizontal:widthPixel(5),
-    backgroundColor:'green'
+    marginHorizontal: width * 0.012,
+    backgroundColor: 'green',
   },
   circle4: {
-    height: heightPixel(60),
-    width: widthPixel(60),
-    borderRadius: 50,
+    height: width * 0.15,
+    width: width * 0.15,
+    borderRadius: width * 0.075,
     borderWidth: 1,
     borderColor: '#D9D9D9',
-    marginHorizontal:widthPixel(5),
-    backgroundColor:'gray'
+    marginHorizontal: width * 0.012,
+    backgroundColor: 'gray',
   },
   circle5: {
-    height: heightPixel(60),
-    width: widthPixel(60),
-    borderRadius: 50,
+    height: width * 0.15,
+    width: width * 0.15,
+    borderRadius: width * 0.075,
     borderWidth: 1,
     borderColor: '#D9D9D9',
-    marginHorizontal:widthPixel(5)
+    marginHorizontal: width * 0.012,
   },
   SizeSelection: {
-    marginLeft: widthPixel(15),
-    marginTop: heightPixel(15),
+    marginLeft: width * 0.04,
+    marginTop: height * 0.02,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: heightPixel(20),
+    marginBottom: height * 0.025,
   },
   size: {
     textDecorationLine: 'underline',
     color: 'black',
-    right: widthPixel(10),
+    right: width * 0.025,
   },
   box: {
-    height: heightPixel(35),
-    width: widthPixel(35),
+    height: height * 0.045,
+    width: width * 0.09,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#f5f5f5',
@@ -213,11 +215,11 @@ export const style = StyleSheet.create({
     shadowOpacity: 0.9,
     shadowRadius: 4,
     elevation: 4,
-    marginRight: 10,
+    marginRight: width * 0.025,
   },
   boxs: {
     flexDirection: 'row',
-    marginTop: heightPixel(10),
+    marginTop: height * 0.012,
   },
   sizeTxt: {
     color: 'black',
@@ -228,58 +230,56 @@ export const style = StyleSheet.create({
     alignItems: 'center',
   },
   headers: {
-    fontSize: 18,
+    fontSize: width * 0.045,
     fontWeight: 'bold',
     color: 'black',
   },
   more: {
-    fontSize: 14,
+    fontSize: width * 0.035,
     color: 'black',
   },
   listContainer: {
-    marginTop: heightPixel(8),
+    marginTop: height * 0.01,
   },
   listItem: {
-    fontSize: 14,
+    fontSize: width * 0.035,
     color: 'black',
-    marginBottom: heightPixel(4),
+    marginBottom: height * 0.005,
   },
   productDetails: {
-    padding: heightPixel(10),
-    marginBottom: heightPixel(10),
+    padding: height * 0.012,
+    marginBottom: height * 0.012,
   },
   qulityBox: {
     width: '100%',
-    height: heightPixel(150),
-    marginTop: heightPixel(10),
+    height: height * 0.18,
+    marginTop: height * 0.012,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  Icon:{
-    height:heightPixel(80),
-    width:widthPixel(80),
-    // alignSelf:'center',
-    
+  Icon: {
+    height: height * 0.08,
+    width: width * 0.17,
   },
-  IconBox:{
-    height:heightPixel(120),
-    width:widthPixel(118),
-    alignSelf:'center',
-    marginLeft:widthPixel(5),
-    alignItems:'center',
-    justifyContent:'center'
+  IconBox: {
+    height: height * 0.15,
+    width: width * 0.3,
+    alignSelf: 'center',
+    marginLeft: width * 0.01,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  IconTxt:{
-    color:'black',
-    fontSize:13,
-    textAlign:'center'
+  IconTxt: {
+    color: 'black',
+    fontSize: width * 0.035,
+    textAlign: 'center',
   },
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
     backgroundColor: 'white',
-    padding: heightPixel(16),
+    padding: height * 0.02,
     shadowColor: '#000',
     shadowOpacity: 0.1,
     shadowRadius: 4,
@@ -289,53 +289,53 @@ export const style = StyleSheet.create({
     flex: 1,
   },
   title: {
-    fontSize: 16,
+    fontSize: width * 0.04,
     fontWeight: 'bold',
-    marginBottom: heightPixel(4),
-    color:'black'
+    marginBottom: height * 0.005,
+    color: 'black',
   },
   starsRow: {
     flexDirection: 'row',
-    marginTop:heightPixel(30)
+    marginTop: height * 0.04,
   },
   ratingText: {
-    fontSize: 12,
+    fontSize: width * 0.03,
     color: 'gray',
-    marginTop: heightPixel(4),
+    marginTop: height * 0.005,
   },
   divider: {
-    width: widthPixel(3),
+    width: width * 0.007,
     backgroundColor: '#ddd',
-    height: heightPixel(100),
-    marginHorizontal: widthPixel(10),
-    marginTop:heightPixel(20)
+    height: height * 0.13,
+    marginHorizontal: width * 0.025,
+    marginTop: height * 0.03,
   },
   customerWords: {
     flex: 1,
-    marginTop:heightPixel(25)
+    marginTop: height * 0.03,
   },
   wordRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginVertical: widthPixel(4),
-    marginTop:heightPixel(10)
+    marginVertical: width * 0.01,
+    marginTop: height * 0.015,
   },
   subText: {
-    fontSize: 14,
+    fontSize: width * 0.035,
     color: 'gray',
   },
   wordText: {
-    fontSize: 14,
+    fontSize: width * 0.035,
     fontWeight: 'bold',
-    color:'black',
-    marginHorizontal:widthPixel(8),
-    left:widthPixel(5)
+    color: 'black',
+    marginHorizontal: width * 0.02,
+    left: width * 0.012,
   },
   viewMore: {
     position: 'absolute',
-    top: heightPixel(16),
-    right: widthPixel(16),
-    fontSize: 12,
+    top: height * 0.02,
+    right: width * 0.04,
+    fontSize: width * 0.03,
     color: 'gray',
   },
   contain: {
@@ -343,7 +343,7 @@ export const style = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     backgroundColor: 'white',
-    padding: 10,
+    padding: width * 0.03,
     borderTopWidth: 1,
     borderColor: '#ddd',
   },
@@ -352,21 +352,21 @@ export const style = StyleSheet.create({
   },
   iconButton: {
     backgroundColor: '#f5f5f5',
-    padding: 10,
-    borderRadius: 10,
-    marginRight: 8,
+    padding: width * 0.03,
+    borderRadius: width * 0.025,
+    marginRight: width * 0.02,
   },
   addToCartButton: {
     flex: 1,
     backgroundColor: 'black',
-    paddingVertical: 12,
-    borderRadius: 10,
+    paddingVertical: height * 0.015,
+    borderRadius: width * 0.025,
     alignItems: 'center',
-    marginLeft: 10,
+    marginLeft: width * 0.02,
   },
   addToCartText: {
     color: 'white',
-    fontSize: 16,
+    fontSize: width * 0.04,
     fontWeight: 'bold',
   },
 });

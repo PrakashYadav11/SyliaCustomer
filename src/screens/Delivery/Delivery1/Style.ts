@@ -1,126 +1,128 @@
-import {StyleSheet} from 'react-native';
-import {heightPixel, widthPixel} from '../../../Utils/ResponsiveDimensions';
+import {StyleSheet, Dimensions} from 'react-native';
+
+const {width, height} = Dimensions.get('window');
 
 export const style = StyleSheet.create({
   mainContainer: {
     flex: 1,
     backgroundColor: '#D9D9D980',
-    
   },
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingHorizontal: widthPixel(16),
-    paddingVertical: heightPixel(10),
+    paddingHorizontal: width * 0.04, // 4% of screen width
+    paddingVertical: height * 0.012, // 1.2% of screen height
     backgroundColor: 'white',
   },
+
   textContainer: {
-    marginLeft: widthPixel(10),
+    marginLeft: width * 0.025, // 2.5% of screen width
   },
   stepText: {
-    fontSize: 12,
+    fontSize: width * 0.03, // 3% of screen width
     color: 'black',
     textAlign: 'left',
   },
   bagText: {
-    fontSize: 14,
+    fontSize: width * 0.035, // 3.5% of screen width
     fontWeight: 'bold',
     color: 'black',
   },
   delivery: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: heightPixel(8),
-    paddingHorizontal: widthPixel(18),
+    paddingVertical: height * 0.01, // 1% of screen height
+    paddingHorizontal: width * 0.045, // 4.5% of screen width
     borderBottomWidth: 1,
     borderBottomColor: '#E0E0E0',
     backgroundColor: 'white',
-    top: heightPixel(1),
+    top: height * 0.001, // Small adjustment for positioning
   },
   text: {
-    marginLeft: widthPixel(8),
-    fontSize: 14,
+    marginLeft: width * 0.02, // 2% of screen width
+    fontSize: width * 0.035, // 3.5% of screen width
     color: 'gray',
   },
   imageContainer: {
     flexDirection: 'row',
     backgroundColor: 'white',
-    padding: heightPixel(10),
-    borderRadius: 10,
+    padding: height * 0.012, // 1.2% of screen height
+    borderRadius: width * 0.025, // 2.5% of screen width
     alignItems: 'center',
-    top: heightPixel(1),
+    top: height * 0.001, // Small adjustment
   },
   image: {
-    width: widthPixel(120),
-    height: heightPixel(120),
-    borderRadius: 10,
+    width: width * 0.3, // 30% of screen width
+    height: width * 0.3, // Keep aspect ratio square
+    borderRadius: width * 0.025, // 2.5% of screen width
   },
   detailsContainer: {
     flex: 1,
-    marginLeft: widthPixel(10),
+    marginLeft: width * 0.025, // 2.5% of screen width
   },
   brand: {
-    fontSize: 14,
+    fontSize: width * 0.035, // 3.5% of screen width
     fontWeight: 'bold',
     color: 'black',
   },
   productName: {
-    fontSize: 14,
+    fontSize: width * 0.035, // 3.5% of screen width
     color: 'black',
   },
   priceContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: heightPixel(4),
+    marginVertical: height * 0.005, // 0.5% of screen height
   },
   oldPrice: {
-    fontSize: 14,
+    fontSize: width * 0.035, // 3.5% of screen width
     textDecorationLine: 'line-through',
     color: 'gray',
-    marginRight: widthPixel(6),
+    marginRight: width * 0.015, // 1.5% of screen width
   },
+
   newPrice: {
-    fontSize: 14,
+    fontSize: width * 0.035, // 3.5% of screen width
     fontWeight: 'bold',
     color: 'black',
   },
   freeDelivery: {
-    fontSize: 14,
+    fontSize: width * 0.035, // 3.5% of screen width
     fontWeight: 'bold',
-    marginVertical: heightPixel(4),
+    marginVertical: height * 0.005, // 0.5% of screen height
     color: 'black',
   },
   infoContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: heightPixel(2),
+    marginVertical: height * 0.003, // 0.3% of screen height
   },
   infoText: {
-    fontSize: 12,
+    fontSize: width * 0.03, // 3% of screen width
     color: 'gray',
-    marginLeft: widthPixel(4),
+    marginLeft: width * 0.02, // 2% of screen width
   },
   removeContainer: {
     alignItems: 'flex-end',
-    padding: 10,
+    padding: height * 0.012, // 1.2% of screen height
     backgroundColor: 'white',
-    top: heightPixel(2),
+    top: height * 0.002, // Small adjustment
   },
   button: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: widthPixel(12),
-    paddingVertical: heightPixel(6),
+    paddingHorizontal: width * 0.03, // 3% of screen width
+    paddingVertical: height * 0.008, // 0.8% of screen height
     borderWidth: 1,
     borderColor: '#ccc',
-    borderRadius: 5,
-    height: heightPixel(35),
-    width: widthPixel(169),
+    borderRadius: width * 0.015, // 1.5% of screen width
+    height: height * 0.045, // 4.5% of screen height
+    width: width * 0.45, // 45% of screen width
   },
   buttonText: {
-    marginLeft: widthPixel(5),
-    fontSize: 14,
+    marginLeft: width * 0.02, // 2% of screen width
+    fontSize: width * 0.035, // 3.5% of screen width
     fontWeight: 'bold',
     color: 'black',
   },
@@ -128,127 +130,128 @@ export const style = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingVertical: heightPixel(12),
-    paddingHorizontal: widthPixel(15),
+    paddingVertical: height * 0.015, // 1.5% of screen height
+    paddingHorizontal: width * 0.04, // 4% of screen width
     backgroundColor: 'white',
-    top: heightPixel(3),
+    top: height * 0.004, // Adjust position responsively
   },
   leftSection: {
     flexDirection: 'row',
     alignItems: 'center',
   },
   tex: {
-    marginLeft: 8,
-    fontSize: 14,
+    marginLeft: width * 0.02, // 2% of screen width
+    fontSize: width * 0.035, // 3.5% of screen width
     fontWeight: 'bold',
     color: 'black',
   },
   selectText: {
-    fontSize: 14,
+    fontSize: width * 0.035, // 3.5% of screen width
     color: 'gray',
   },
   detailcontainer: {
-    top: heightPixel(4),
-    padding: heightPixel(15),
+    top: height * 0.005, // Adjusted dynamically
+    padding: width * 0.04, // 4% of screen width
     backgroundColor: 'white',
   },
   header: {
-    fontSize: 16,
+    fontSize: width * 0.04, // 4% of screen width
     fontWeight: 'bold',
-    marginBottom: heightPixel(10),
+    marginBottom: height * 0.012, // 1.2% of screen height
     color: 'black',
   },
   row: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginVertical: heightPixel(4),
+    marginVertical: height * 0.005, // 0.5% of screen height
   },
   subRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginVertical: heightPixel(2),
+    marginVertical: height * 0.003, // 0.3% of screen height
   },
   label: {
-    fontSize: 14,
+    fontSize: width * 0.035, // Responsive font size (3.5% of screen width)
     color: '#333',
   },
   subLabel: {
-    fontSize: 13,
+    fontSize: width * 0.032, // 3.2% of screen width
     color: 'black',
   },
   value: {
-    fontSize: 14,
+    fontSize: width * 0.035, // 3.5% of screen width
     color: 'black',
   },
   savings: {
     color: 'black',
   },
   info: {
-    fontSize: 12,
+    fontSize: width * 0.03, // 3% of screen width
     color: 'black',
   },
   totalLabel: {
-    fontSize: 15,
+    fontSize: width * 0.038, // 3.8% of screen width
     fontWeight: 'bold',
     color: 'black',
   },
   totalValue: {
-    fontSize: 15,
+    fontSize: width * 0.038, // 3.8% of screen width
     fontWeight: 'bold',
     color: 'black',
   },
   returnContainer: {
-    top: heightPixel(10),
-    padding: heightPixel(15),
+    top: height * 0.012, // Adjusted for responsiveness (1.2% of screen height)
+    padding: width * 0.04, // 4% of screen width
     backgroundColor: 'white',
   },
   head: {
-    fontSize: 16,
+    fontSize: width * 0.04, // Responsive font size (4% of screen width)
     fontWeight: 'bold',
-    marginBottom: heightPixel(5),
+    marginBottom: height * 0.007, // 0.7% of screen height
     color: 'black',
   },
   description: {
-    fontSize: 14,
+    fontSize: width * 0.035, // 3.5% of screen width
     color: '#666',
-    marginBottom: heightPixel(5),
+    marginBottom: height * 0.007, // 0.7% of screen height
   },
   link: {
-    fontSize: 14,
+    fontSize: width * 0.035, // 3.5% of screen width
     fontWeight: 'bold',
     color: 'black',
   },
   btncontainer: {
-    top: heightPixel(20),
+    top: height * 0.025, // 2.5% of screen height
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: heightPixel(15),
+    padding: width * 0.04, // 4% of screen width
     backgroundColor: 'white',
   },
   priceContaine: {
     flexDirection: 'column',
   },
   price: {
-    fontSize: 16,
+    fontSize: width * 0.04, // 4% of screen width
     fontWeight: 'bold',
     color: 'black',
   },
   viewDetails: {
-    fontSize: 12,
+    fontSize: width * 0.03, // 3% of screen width
     color: 'black',
   },
+
   btn: {
     backgroundColor: 'black',
-    height:heightPixel(46),
-    width:widthPixel(272),
-    borderRadius: 10,
-    alignItems:'center',
-    justifyContent:'center'
+    height: height * 0.06, // 6% of screen height
+    width: width * 0.7, // 70% of screen width
+    borderRadius: width * 0.025, // 2.5% of screen width
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   btnText: {
     color: 'white',
-    fontSize: 16,
+    fontSize: width * 0.045, // 4.5% of screen width
     fontWeight: 'bold',
   },
 });

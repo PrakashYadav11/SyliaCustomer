@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 import {heightPixel, widthPixel} from '../../../Utils/ResponsiveDimensions';
-import {baseGestureHandlerWithDetectorProps} from 'react-native-gesture-handler/lib/typescript/handlers/gestureHandlerCommon';
+const { width, height } = Dimensions.get('window');
 
 export const style = StyleSheet.create({
   mainContainer: {
@@ -10,83 +10,83 @@ export const style = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: heightPixel(10),
-    paddingHorizontal: widthPixel(15),
+    paddingVertical: height * 0.012,
+    paddingHorizontal: width * 0.04,
     backgroundColor: 'white',
   },
   textContainer: {
-    marginLeft: widthPixel(15),
+    marginLeft: width * 0.04,
   },
   stepText: {
-    fontSize: 12,
+    fontSize: width * 0.03,
     color: 'black',
   },
   title: {
-    fontSize: 16,
+    fontSize: width * 0.04,
     fontWeight: '500',
     color: 'black',
   },
   card: {
     backgroundColor: '#F4ECEC8C',
-    padding: heightPixel(15),
+    padding: height * 0.018,
     borderRadius: 10,
     shadowColor: 'black',
-    shadowOffset: {width: 20, height: 2},
+    shadowOffset: { width: width * 0.05, height: height * 0.002 },
     shadowRadius: 4,
     elevation: 5,
-    shadowOpacity: 0.001,
-    margin: heightPixel(10),
+    shadowOpacity: 0.1,
+    margin: height * 0.012,
   },
   buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: heightPixel(10),
+    marginBottom: height * 0.012,
   },
   button: {
     backgroundColor: '#DADADA',
-    paddingVertical: heightPixel(5),
-    paddingHorizontal: heightPixel(12),
+    paddingVertical: height * 0.006,
+    paddingHorizontal: width * 0.03,
     borderRadius: 5,
-    marginRight: widthPixel(5),
+    marginRight: width * 0.012,
   },
   buttonText: {
-    fontSize: 12,
+    fontSize: width * 0.03,
     fontWeight: 'bold',
   },
   changeText: {
-    fontSize: 12,
+    fontSize: width * 0.03,
     color: '#666',
   },
   name: {
-    fontSize: 16,
+    fontSize: width * 0.04,
     fontWeight: 'bold',
-    marginBottom: heightPixel(2),
+    marginBottom: height * 0.002,
   },
   address: {
-    fontSize: 14,
+    fontSize: width * 0.035,
     color: '#555',
   },
   phone: {
-    fontSize: 14,
+    fontSize: width * 0.035,
     color: '#333',
-    marginTop: heightPixel(5),
+    marginTop: height * 0.006,
   },
   divider: {
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
-    marginVertical: heightPixel(10),
+    marginVertical: height * 0.012,
   },
-  deliveryContainer: {
+  deliveryContaine: {
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   codText: {
-    fontSize: 12,
+    fontSize: width * 0.03,
     color: '#333',
   },
   estDelivery: {
-    fontSize: 12,
+    fontSize: width * 0.03,
     color: '#333',
   },
   boldText: {
@@ -94,96 +94,96 @@ export const style = StyleSheet.create({
   },
   deliverycontainer: {
     backgroundColor: '#D9D9D9B2',
-    padding: heightPixel(15),
+    padding: height * 0.018,
     borderRadius: 10,
-    marginTop: heightPixel(50),
-    height: heightPixel(203),
+    marginTop: height * 0.06,
+    height: height * 0.25,
   },
   header: {
-    fontSize: 16,
+    fontSize: width * 0.04,
     fontWeight: '600',
-    marginBottom: heightPixel(5),
+    marginBottom: height * 0.006,
     color: 'black',
   },
   subHeader: {
-    fontSize: 12,
+    fontSize: width * 0.03,
     color: 'black',
-    marginBottom: heightPixel(15),
+    marginBottom: height * 0.018,
   },
   productContainer: {
     flexDirection: 'row',
     alignItems: 'center',
   },
   productImage: {
-    width: widthPixel(80),
-    height: heightPixel(105),
+    width: width * 0.2,
+    height: height * 0.13,
     borderRadius: 8,
-    marginRight: widthPixel(15),
+    marginRight: width * 0.04,
   },
   details: {
     flex: 1,
   },
   brand: {
-    fontSize: 14,
+    fontSize: width * 0.035,
     fontWeight: 'bold',
     color: 'black',
   },
   productTitle: {
-    fontSize: 13,
+    fontSize: width * 0.032,
     color: 'black',
-    marginBottom: heightPixel(2),
+    marginBottom: height * 0.002,
   },
   priceContainer: {
     flexDirection: 'row',
     alignItems: 'center',
   },
   originalPrice: {
-    fontSize: 12,
+    fontSize: width * 0.03,
     color: 'gray',
     textDecorationLine: 'line-through',
-    marginRight: widthPixel(5),
+    marginRight: width * 0.012,
   },
   discountedPrice: {
-    fontSize: 14,
+    fontSize: width * 0.035,
     fontWeight: 'bold',
   },
   freeDelivery: {
-    fontSize: 15,
+    fontSize: width * 0.038,
     color: 'black',
     fontWeight: 'bold',
-    marginTop: heightPixel(5),
+    marginTop: height * 0.006,
   },
   btncontainer: {
-    top: heightPixel(200),
+    top: height * 0.25,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: heightPixel(15),
+    padding: height * 0.018,
     backgroundColor: 'white',
   },
   priceContaine: {
     flexDirection: 'column',
   },
   price: {
-    fontSize: 16,
+    fontSize: width * 0.04,
     fontWeight: 'bold',
     color: 'black',
   },
   viewDetails: {
-    fontSize: 12,
+    fontSize: width * 0.03,
     color: 'black',
   },
   btn: {
     backgroundColor: 'black',
-    height: heightPixel(46),
-    width: widthPixel(272),
+    height: height * 0.06,
+    width: width * 0.7,
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
   },
   btnText: {
     color: 'white',
-    fontSize: 16,
+    fontSize: width * 0.04,
     fontWeight: 'bold',
   },
 });
