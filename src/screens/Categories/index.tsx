@@ -12,7 +12,7 @@ const Categories = ({navigation}) => {
     <View style={style.container}>
       <View style={style.header}>
         <CustomBackBtn
-          onPress={() => navigation.navigate(NavigationRoutes.home)}
+          onPress={() => navigation.navigate(NavigationRoutes.HomeStake)}
         />
         <Text style={style.headerTxt}>{Strings.All_Categories}</Text>
       </View>

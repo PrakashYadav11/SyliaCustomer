@@ -1,12 +1,18 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  Dimensions,
+} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './style';
-import { NavigationRoutes } from '../../shared/NavigationRoutes';
+import {NavigationRoutes} from '../../shared/NavigationRoutes';
 
-const { width, height } = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
-const PaymentSuccess = ({ navigation }) => {
+const PaymentSuccess = ({navigation}) => {
   return (
     <View style={styles.container}>
       {/* Success Icon */}
@@ -25,14 +31,14 @@ const PaymentSuccess = ({ navigation }) => {
         </TouchableOpacity>
 
         {/* Back to Home Button */}
-        <TouchableOpacity style={styles.backButton} onPress={() => navigation.navigate(NavigationRoutes.bottom)}>
+        <TouchableOpacity
+          style={styles.backButton}
+          onPress={() => navigation.navigate(NavigationRoutes.Search)}>
           <Text style={styles.buttonText}>Back To Home</Text>
         </TouchableOpacity>
       </View>
     </View>
   );
 };
-
-
 
 export default PaymentSuccess;

@@ -6,14 +6,15 @@ import styles from './style'
 import { useNavigation } from '@react-navigation/native'
 
 interface inputTypes {
-    headerText:string
+    headerText:string,
+    onPress: any
   }
 
-const CustomHeaderText = ({headerText}:inputTypes) => {
+const CustomHeaderText = ({headerText,onPress}:inputTypes) => {
     const navigation = useNavigation();
   return (
     <View style={styles.head}>
-     <CustomBackBtn onPress={()=>navigation.navigate(NavigationRoutes.bottom)}/>
+     <CustomBackBtn onPress={onPress}/>
     <Text style={styles.headText}>{headerText}</Text>
      </View>
   )

@@ -12,8 +12,9 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import CustomHeaderText from '../../components/CustomHeaderText';
 import {Images} from '../../assets/Images';
 import styles from './style';
+import { NavigationRoutes } from '../../shared/NavigationRoutes';
 
-const TrackAndViewOrder = () => {
+const TrackAndViewOrder = ({navigation}) => {
   const orderStatus = [
     {id: 1, status: 'Order Confirmed', completed: true},
     {id: 2, status: 'Order Shipped', completed: true},
@@ -23,7 +24,7 @@ const TrackAndViewOrder = () => {
 
   return (
     <View style={styles.container}>
-      <CustomHeaderText headerText={'Adidas Shoes For Men'} />
+      <CustomHeaderText headerText={'Adidas Shoes For Men'} onPress={()=>navigation.navigate(NavigationRoutes.myorders)}/>
 
       <View style={styles.productContainer}>
         <Image source={Images.cart_photo} style={styles.productImage} />

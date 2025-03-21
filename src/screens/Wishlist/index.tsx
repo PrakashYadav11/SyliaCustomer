@@ -11,7 +11,7 @@ const Wishlist = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.head}>
-        <CustomHeaderText headerText={'Your Wishlist'} />
+        <CustomHeaderText headerText={'Your Wishlist'} onPress={()=>navigation.navigate(NavigationRoutes.my_profile)}/>
         <TouchableOpacity onPress={()=>navigation.navigate(NavigationRoutes.notification)}>
         <Icon name='shoppingcart' size={26} style={styles.cart}/>
         </TouchableOpacity>

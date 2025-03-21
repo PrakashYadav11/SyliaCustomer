@@ -11,7 +11,7 @@ const Cart = ({navigation}) => {
     <View style={style.container}>
       <View style={style.header}>
         <TouchableOpacity
-          onPress={() => navigation.navigate(NavigationRoutes.home)}>
+          onPress={() => navigation.navigate(NavigationRoutes.HomeStake)}>
           <Icon name="arrowleft" size={30} color="black" />
         </TouchableOpacity>
         <Text style={style.headerTxt}>{Strings.Your_Cart}</Text>

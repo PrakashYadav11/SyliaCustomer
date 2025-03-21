@@ -11,7 +11,7 @@ import { NavigationRoutes } from '../../shared/NavigationRoutes';
 const MyOrders = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <CustomHeaderText headerText={'My Orders'} />
+      <CustomHeaderText headerText={'My Orders'} onPress={()=>navigation.navigate(NavigationRoutes.bottom)}/>
       <View style={styles.search}>
         <CustomSearchBar showNotificationIcon={false} customWidth={'64%'} />
         <TouchableOpacity style={styles.filter}>

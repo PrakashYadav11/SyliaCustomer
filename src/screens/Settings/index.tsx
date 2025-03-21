@@ -3,15 +3,16 @@ import { View, Text, Switch, TouchableOpacity } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons"; // Correct import for CLI
 import CustomHeaderText from "../../components/CustomHeaderText";
 import styles from "./style";
+import { NavigationRoutes } from "../../shared/NavigationRoutes";
 
 
-const SettingsComponent = () => {
+const SettingsComponent = ({navigation}) => {
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
 
   return (
     <View style={styles.container}>
-      <CustomHeaderText headerText={"Settings"}/>
+      <CustomHeaderText headerText={"Settings"} onPress={()=>navigation.navigate(NavigationRoutes.bottom)}/>
       <View style={styles.line}/>
       <Text style={styles.sectionTitle}>Manage settings</Text>
       <View style={styles.settingItem}>
